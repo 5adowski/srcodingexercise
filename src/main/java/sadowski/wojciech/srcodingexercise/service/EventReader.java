@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class EventReader {
+    private final String DEFAULT_FILE_PATH = "src/main/resources/BE_data.json";
 
     public List<Event> getEvents(File file) {
         List<Event> events = null;
@@ -22,6 +23,10 @@ public class EventReader {
             System.out.printf("Unexpected error:\n%s", e.getMessage());
         }
         return events;
+    }
+
+    public List<Event> getEvents() {
+        return getEvents(new File(DEFAULT_FILE_PATH));
     }
 
 }
