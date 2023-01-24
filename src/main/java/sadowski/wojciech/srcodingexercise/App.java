@@ -56,8 +56,8 @@ public class App {
                     }
                     if (amount <= sortedEvents.size()) {
                         printer.printResults(sortedEvents, amount);
+                        System.out.printf("Printed from inputted url with given quantity %d", amount);
                     }
-                    System.out.printf("Printed from inputted url with given quantity %d", amount);
                 } else if (!args[0].equals("-url")) {
                     System.out.println("Wrong input parameter");
                 } else {
